@@ -20,6 +20,10 @@ public class WildcardMain1 {
 		WildcardEx.printWildcardV2(dogBox);
 
 		Dog dog = WildcardEx.printAndReturnGeneric(dogBox);
+
+		catBox.set(new Cat("야옹이", 200));
+		Cat cat = WildcardEx.printAndReturnGeneric(catBox);
+
 		Animal animal = WildcardEx.printAndReturnWildcard(dogBox);
 	}
 }
