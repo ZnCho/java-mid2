@@ -2,13 +2,13 @@ package collection.list;
 
 public class BatchProcessor {
 
-	private final MyList<Integer> list;
+	private final MyList<Integer> list; //= x001(new MyArrayList<>())
 
-	//의존 관계까 외부에서(생성할 때) 주입 : 생성자 의존관계주입(DI) (new BatchProcessor(new MyLinkedList());)
+	//의존 관계를 외부에서(생성할 때) 주입 : 생성자 의존관계주입(DI) (new BatchProcessor(new MyLinkedList());)
 	//MyList = new MyArrayList
 	//MyList = new MyLinkedList
-	public BatchProcessor(MyList<Integer> list) {
-		this.list = list;
+	public BatchProcessor(MyList<Integer> list) { //=x001
+		this.list = list; // = x001(new MyArrayList<>())
 	}
 
 	public void logic(int size) {
